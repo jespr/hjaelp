@@ -1,5 +1,12 @@
 /*global jQuery */
 
+/*
+ * Hjaelp plugin for jQuery
+ * Creator: Jesper Christiansen
+ * Project home: https://github.com/jespr/hjaelp
+ * Licensed under the Apache license
+ */
+
 ;(function($) {
 
   var defaults = {
@@ -8,7 +15,7 @@
     content: "Content..."
   };
 
-  function Hilfe(targets, options) {
+  function Hjaelp(targets, options) {
     var that = this;
 
     targets.each(function() {
@@ -25,7 +32,7 @@
     });
   }
 
-  Hilfe.prototype = {
+  Hjaelp.prototype = {
 
     setup: function(element) {
       var popoverContainer = "<div class='hjaelp-help-popover'></div>",
@@ -49,7 +56,7 @@
 
   };
 
-  $.fn.hilfe = function(options) {
-    new Hilfe(this, options);
+  $.fn.hjaelp = function(options) {
+    new Hjaelp(this, options);
   };
 }(jQuery));
