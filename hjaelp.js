@@ -12,7 +12,6 @@
   var defaults = {
     icon: "?",
     title: "Title",
-    content: "Content..."
   };
 
   function Hjaelp(targets, options) {
@@ -21,8 +20,7 @@
     targets.each(function() {
       var element = $(this),
           text = {
-            title: element.data('title'),
-            content: element.data('content')
+            title: element.data('title')
           };
 
       that.options = $.extend({}, defaults, options, text);
@@ -37,9 +35,13 @@
     setup: function(element) {
       var popoverContainer = "<div class='hjaelp-help-popover'></div>",
           arrow   = "<div class='hjaelp-popover-arrow'></div>",
-          title   = "<strong>" + this.options.title + "</strong>",
-          content = "<p>" + this.options.content + "</p>",
+          title   = "<div class='title'>" + this.options.title + "</div>",
+          content = "<p>" + element.html() + "</p>",
           popover = $(popoverContainer).html(arrow + title + content);
+
+      if (this.options.width) {
+        popover.width(this.options.width);
+      }
 
       element.html(this.options.icon);
       element.append(popover);
