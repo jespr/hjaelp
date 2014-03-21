@@ -5,6 +5,8 @@
  * Creator: Jesper Christiansen
  * Project home: https://github.com/jespr/hjaelp
  * Licensed under the Apache license
+ *
+ * Version: 1.0
  */
 
 ;(function($) {
