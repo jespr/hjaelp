@@ -14,6 +14,7 @@
   var defaults = {
     icon: "?",
     title: "Title",
+    showArrow: true
   };
 
   function Hjaelp(targets, options) {
@@ -39,13 +40,19 @@
           arrow   = "<div class='hjaelp-popover-arrow'></div>",
           title   = "<div class='title'>" + this.options.title + "</div>",
           content = "<p>" + element.html() + "</p>",
-          popover = $(popoverContainer).html(arrow + title + content);
+          popover = $(popoverContainer);
 
       if (this.options.width) {
         popover.width(this.options.width);
       }
 
-      element.html(this.options.icon);
+      if (this.options.showArrow) {
+        popover.append(arrow);
+      }
+
+      popover.append(title + content);
+
+      element.html("<a class='hjaelp-icon'>" + this.options.icon + "</a>");
       element.append(popover);
     },
 
