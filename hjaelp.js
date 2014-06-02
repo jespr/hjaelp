@@ -22,11 +22,12 @@
 
     targets.each(function() {
       var element = $(this),
-          text = {
-            title: element.data('title')
+          data = {
+            title: element.data('title'),
+            icon: element.data('icon')
           };
 
-      that.options = $.extend({}, defaults, options, text);
+      that.options = $.extend({}, defaults, options, data);
 
       that.setup(element);
       that.registerEventhandlers(element);
