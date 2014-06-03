@@ -48,20 +48,27 @@
 }
 
 .hjaelp-popover-arrow {
-    -moz-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 
-    position: absolute;
-    width: 12px;
-    height: 12px;
-    background: #888;
-    top: -5px;
-    left: 13px;
-    box-shadow: -1px -1px 0px #888;
-  }
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: #888;
+  top: -5px;
+  box-shadow: -1px -1px 0px #888;
+}
+
+.hjaelp-left .hjaelp-popover-arrow {
+  right: 15px;
+}
+
+.hjaelp-right .hjaelp-popover-arrow {
+  left: 13px;
+}
 
 .hjaelp-help-popover.show {
   display: block;

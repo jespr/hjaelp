@@ -9,13 +9,42 @@
     body {
       font-family: "Lucida Grande", "Helvetica", "Arial";
     }
+
+    .container {
+      position: relative;
+      height: 100px;
+      margin-right: 50px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 20px;
+    }
+
+    .right {
+      text-align: right;
+    }
+
+    .help {
+      top: inherit;
+      position: inherit;
+    }
   </style>
 </head>
 <body>
 
-  <span class="help" data-title="Help me!">
-    This could be your really helpful text when someone clicks the help-icon
-  </span>
+  <div class="container">
+    <span>
+      Right aligned popover
+      <div class="help" data-title="Help me!" data-icon="R">
+        This could be your really helpful text when someone clicks the help-icon
+      </div>
+    </span>
+    <span class="right">
+      Left aligned popover
+      <div class="help" data-title="Help me!" data-icon="L" data-placement="left">
+        This could be your really helpful text when someone clicks the help-icon
+      </div>
+    </span>
+  </div>
 
   <script type="text/javascript">
     $('.help').hjaelp({ width: '400px' });
