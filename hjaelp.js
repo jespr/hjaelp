@@ -6,7 +6,7 @@
  * Project home: https://github.com/jespr/hjaelp
  * Licensed under the Apache license
  *
- * Version: 1.1.0
+ * Version: 1.1.1
  */
 
 ;(function($) {
