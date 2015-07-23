@@ -34,6 +34,7 @@
 
       that.setup(element);
       that.registerEventhandlers(element);
+      element.addClass('hjaelp-loaded');
     });
   }
 
